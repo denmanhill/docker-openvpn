@@ -9,7 +9,7 @@ RUN yum install -y epel-release && \
 	yum clean all && \
 	groupadd -r vpn
 
-COPY /SINGLEPOOL/home/config/piaopenvpn/openvpn.sh /bin/openvpn.sh
+COPY /openvpn.sh /bin/openvpn.sh
 WORKDIR /pia
 
 ENV REGION="US East"
