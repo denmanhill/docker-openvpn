@@ -11,6 +11,7 @@ RUN yum install -y epel-release && \
 
 COPY /openvpn.sh /bin/openvpn.sh
 WORKDIR /pia
+RUN chmod 777 /bin/openvpn.sh
 
 ENV REGION="US East"
-ENTRYPOINT ["openvpn.sh"]
+ENTRYPOINT ["/bin/openvpn.sh"]
