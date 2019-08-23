@@ -2,7 +2,7 @@
 version: "2"
 services:
   piaopenvpn:
-    image: denmanhill/docker-openvpn
+    build: https://github.com/denmanhill/docker-openvpn
     container_name: piaopenvpn
     cap_add:
       - NET_ADMIN
