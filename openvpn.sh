@@ -16,7 +16,7 @@ activate_firewall() {
   fi
 
   iptables -F OUTPUT
-  iptables -P OUTPUT DROP
+  iptables -P OUTPUT ACCEPT
   iptables -A OUTPUT -o lo -j ACCEPT
   iptables -A OUTPUT -o tun+ -j ACCEPT
   iptables -A OUTPUT -d ${dock_net} -j ACCEPT
