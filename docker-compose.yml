@@ -3,6 +3,7 @@ version: "2"
 services:
   piaopenvpn:
     build: https://github.com/denmanhill/docker-openvpn.git
+    dockerfile: Dockerfile
     container_name: piaopenvpn
     cap_add:
       - NET_ADMIN
