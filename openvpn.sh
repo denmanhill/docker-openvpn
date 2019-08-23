@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e -u -o pipefail
-
+ip route add 192.168.2.0/24 via 192.168.48.1 dev eth0
 #activate_firewall based on code from dperson/openvpn-client
 activate_firewall() {
   # the VPN Port
